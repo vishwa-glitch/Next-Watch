@@ -246,3 +246,5 @@ This project is open source and available under the [MIT License](LICENSE).
 *This project demonstrates proficiency in React, API integration, modern CSS, and production-ready development practices*
 
 </div>
+#   N e x t - W a t c h  
+ 
