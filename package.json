@@ -1,0 +1,41 @@
+{
+  "name": "nextwatch-entertainment",
+  "private": true,
+  "version": "1.0.0",
+  "description": "NextWatch - AI-powered entertainment recommendation platform built with React, featuring TMDB API integration and beautiful starfield animations",
+  "type": "module",
+  "keywords": ["react", "entertainment", "movies", "tv-shows", "recommendations", "tmdb-api", "vite", "framer-motion"],
+  "author": "Vishw",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nextwatch-entertainment.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
+    "framer-motion": "^12.6.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "vite": "^6.2.0"
+  }
+}
