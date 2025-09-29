@@ -27,6 +27,7 @@ function App() {
       const data = await apiService.getRecommendations(preferences)
         .catch(() => {
           // Fallback to sample data if API fails
+          console.log('API unavailable, using sample data');
           return { results: sampleResults };
         });
       

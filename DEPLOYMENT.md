@@ -48,7 +48,7 @@ npm install -g netlify-cli
 netlify deploy --prod --dir=dist
 ```
 
-### 2. Vercel
+### 2. Vercel (Production Ready)
 
 #### Automatic Deployment
 
@@ -62,12 +62,37 @@ netlify deploy --prod --dir=dist
    vercel --prod
    ```
 
-#### GitHub Integration
+#### GitHub Integration (Recommended)
 
 1. Go to [Vercel](https://vercel.com)
 2. Import your GitHub repository
-3. Vercel will automatically detect Vite settings
-4. Deploy with one click
+3. Vercel will automatically detect Vite settings using `vercel.json`
+4. Configure environment variables:
+   - `VITE_API_URL`: Your production backend URL
+   - `VITE_DEBUG`: `false`
+   - `VITE_DISABLE_API`: `false`
+5. Deploy with one click
+
+#### Production Configuration
+
+The project includes a `vercel.json` file with optimized settings:
+- Static build configuration
+- SPA routing support
+- CORS headers for API calls
+- Environment variable management
+- Performance optimizations
+
+#### Environment Variables Setup
+
+In Vercel dashboard:
+1. Go to Project Settings > Environment Variables
+2. Add production variables:
+   ```
+   VITE_API_URL=https://your-backend-api.com/api
+   VITE_TMDB_IMAGE_BASE_URL=https://image.tmdb.org/t/p/w500
+   VITE_DEBUG=false
+   VITE_DISABLE_API=false
+   ```
 
 ### 3. GitHub Pages
 

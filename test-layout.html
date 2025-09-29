@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Test - NextWatch</title>
+    <link rel="stylesheet" href="src/App.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+            min-height: 100vh;
+        }
+        .test-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="results-section show">
+        <div class="results-header">
+            <h3>Your Personalized Recommendations</h3>
+            <p class="results-count">20 recommendations found</p>
+        </div>
+        
+        <div class="results-container">
+            <div class="results-row">
+                <div class="results-grid">
+                    <div class="test-card">Movie 1</div>
+                    <div class="test-card">Movie 2</div>
+                    <div class="test-card">Movie 3</div>
+                    <div class="test-card">Movie 4</div>
+                </div>
+            </div>
+            <div class="results-row">
+                <div class="results-grid">
+                    <div class="test-card">Movie 5</div>
+                    <div class="test-card">Movie 6</div>
+                    <div class="test-card">Movie 7</div>
+                    <div class="test-card">Movie 8</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

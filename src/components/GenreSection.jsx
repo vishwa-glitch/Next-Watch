@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faFire, faLaugh, faTheaterMasks, faGhost, 
@@ -6,7 +6,7 @@ import {
   faHeart, faCompass, faSearch, faChild, faFilm 
 } from '@fortawesome/free-solid-svg-icons';
 
-function GenreSection() {
+function GenreSection({ selectedGenres = [], onGenreChange }) {
   const genres = [
     { id: 'action', name: 'Action', icon: faFire },
     { id: 'comedy', name: 'Comedy', icon: faLaugh },
@@ -22,13 +22,11 @@ function GenreSection() {
     { id: 'documentary', name: 'Documentary', icon: faFilm }
   ];
   
-  const [selectedGenres, setSelectedGenres] = useState([]);
-  
   const toggleGenre = (genreId) => {
     if (selectedGenres.includes(genreId)) {
-      setSelectedGenres(selectedGenres.filter(id => id !== genreId));
+      onGenreChange(selectedGenres.filter(id => id !== genreId));
     } else {
-      setSelectedGenres([...selectedGenres, genreId]);
+      onGenreChange([...selectedGenres, genreId]);
     }
   };
   

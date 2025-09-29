@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function PlatformSelection() {
+function PlatformSelection({ selectedPlatforms = [], onPlatformChange }) {
   const platforms = [
     { id: 'netflix', name: 'Netflix' },
     { id: 'amazon', name: 'Prime Video' },
@@ -11,19 +11,17 @@ function PlatformSelection() {
     { id: 'crunchyroll', name: 'Crunchyroll' }
   ];
   
-  const [selectedPlatforms, setSelectedPlatforms] = useState([]);
-  
   const togglePlatform = (platformId) => {
     if (selectedPlatforms.includes(platformId)) {
-      setSelectedPlatforms(selectedPlatforms.filter(id => id !== platformId));
+      onPlatformChange(selectedPlatforms.filter(id => id !== platformId));
     } else {
-      setSelectedPlatforms([...selectedPlatforms, platformId]);
+      onPlatformChange([...selectedPlatforms, platformId]);
     }
   };
   
   return (
     <div className="platform-selection">
-      <h4>Available Streaming Platforms</h4>
+      <h4>Available Streaming platforms</h4>
       <div className="platforms">
         {platforms.map(platform => (
           <button 

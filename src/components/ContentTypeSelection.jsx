@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function ContentTypeSelection() {
+function ContentTypeSelection({ selectedContentType = 'all', onContentTypeChange }) {
   const types = [
     { id: 'all', name: 'All Types' },
     { id: 'movie', name: 'Movies' },
     { id: 'series', name: 'TV Series' },
     { id: 'anime', name: 'Anime' }
   ];
-  
-  const [selectedType, setSelectedType] = useState('all');
   
   return (
     <div className="slider-container">
@@ -18,8 +16,8 @@ function ContentTypeSelection() {
           {types.map(type => (
             <button 
               key={type.id}
-              className={`platform-btn ${selectedType === type.id ? 'selected' : ''}`}
-              onClick={() => setSelectedType(type.id)}
+              className={`platform-btn ${selectedContentType === type.id ? 'selected' : ''}`}
+              onClick={() => onContentTypeChange(type.id)}
             >
               {type.name}
             </button>

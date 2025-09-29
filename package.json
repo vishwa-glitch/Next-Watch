@@ -4,7 +4,16 @@
   "version": "1.0.0",
   "description": "NextWatch - AI-powered entertainment recommendation platform built with React, featuring TMDB API integration and beautiful starfield animations",
   "type": "module",
-  "keywords": ["react", "entertainment", "movies", "tv-shows", "recommendations", "tmdb-api", "vite", "framer-motion"],
+  "keywords": [
+    "react",
+    "entertainment",
+    "movies",
+    "tv-shows",
+    "recommendations",
+    "tmdb-api",
+    "vite",
+    "framer-motion"
+  ],
   "author": "Vishw",
   "repository": {
     "type": "git",
@@ -14,8 +23,11 @@
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
+    "build:prod": "cross-env NODE_ENV=production vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:build": "npm run build:prod && npm run preview",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -32,10 +44,12 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^7.0.3",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "terser": "^5.36.0",
     "vite": "^6.2.0"
   }
 }

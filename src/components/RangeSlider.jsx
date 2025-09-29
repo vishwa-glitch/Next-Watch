@@ -6,12 +6,17 @@ function RangeSlider({
   min, 
   max, 
   defaultValue, 
-  valueFormat
+  valueFormat,
+  onChange
 }) {
   const [value, setValue] = useState(defaultValue);
   
   const handleChange = (e) => {
-    setValue(parseInt(e.target.value));
+    const newValue = parseInt(e.target.value);
+    setValue(newValue);
+    if (onChange) {
+      onChange(newValue);
+    }
   };
   
   return (
