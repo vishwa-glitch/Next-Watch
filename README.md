@@ -2,9 +2,9 @@
 
 <div align="center">
 
-![NextWatch Logo](https://via.placeholder.com/200x80/4F46E5/FFFFFF?text=NextWatch)
+<img width="1883" height="884" alt="image" src="https://github.com/user-attachments/assets/8f6e5723-d6d4-4362-9498-b36d7e029af5" />
 
-**AI-Powered Entertainment Recommendation Platform**
+**TMDB-Powered Entertainment Recommendation Platform**
 
 *Built to impress HR recruiters with modern React development skills and TMDB API integration*
 
@@ -32,7 +32,7 @@ NextWatch is a sophisticated entertainment recommendation platform that showcase
 ## ✨ Key Features
 
 ### 🎯 Smart Recommendations
-- AI-powered content discovery based on user preferences
+- TMDB-powered content discovery based on user preferences
 - Genre-based filtering and search functionality
 - Platform-specific content recommendations (Netflix, Disney+, Amazon Prime, etc.)
 
@@ -140,20 +140,55 @@ class ApiService {
 
 ```
 nextwatch-entertainment/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions deployment workflow
+├── dist/                       # Production build output
+├── public/
+│   └── vite.svg               # Vite logo asset
 ├── src/
-│   ├── components/          # Reusable React components
-│   │   ├── Header.jsx      # Navigation header
-│   │   ├── Hero.jsx        # Landing hero section
-│   │   ├── SearchSection.jsx
-│   │   ├── ResultsSection.jsx
-│   │   └── StarfieldBackground.jsx
-│   ├── services/           # API service layer
-│   │   └── api.js         # TMDB API integration
-│   ├── data/              # Sample data and constants
-│   └── App.jsx            # Main application component
-├── public/                # Static assets
-├── .env.example          # Environment variables template
-└── package.json          # Project dependencies
+│   ├── assets/
+│   │   └── react.svg          # React logo asset
+│   ├── components/            # Reusable React components
+│   │   ├── BackToTop.jsx      # Scroll to top functionality
+│   │   ├── ContentTypeSelection.jsx
+│   │   ├── ContentTypeSelector.jsx
+│   │   ├── ErrorBoundary.jsx  # Error handling wrapper
+│   │   ├── Footer.jsx         # Application footer
+│   │   ├── GenreSection.jsx   # Genre display section
+│   │   ├── GenreSelector.jsx  # Genre selection interface
+│   │   ├── Header.jsx         # Navigation header
+│   │   ├── Hero.jsx           # Landing hero section
+│   │   ├── MediaCard.jsx      # Individual media item display
+│   │   ├── ParticleBackground.jsx # Particle effects background
+│   │   ├── PlatformSelection.jsx
+│   │   ├── PlatformSelector.jsx # Streaming platform selector
+│   │   ├── PreferencesSection.jsx # User preferences interface
+│   │   ├── RangeSlider.jsx    # Range input component
+│   │   ├── ResultsSection.jsx # Search results display
+│   │   ├── SearchSection.jsx  # Search functionality
+│   │   └── StarfieldBackground.jsx # Animated starfield
+│   ├── data/
+│   │   └── sampleData.js      # Fallback sample data
+│   ├── services/
+│   │   └── api.js             # API service layer & TMDB integration
+│   ├── App.css                # Main application styles
+│   ├── App.jsx                # Main application component
+│   ├── index.css              # Global styles
+│   └── main.jsx               # Application entry point
+├── .env                       # Environment variables (local)
+├── .env.example              # Environment variables template
+├── .gitignore                # Git ignore patterns
+├── BACKEND_INTEGRATION_GUIDE.md # Backend setup instructions
+├── DEPLOYMENT.md             # Deployment documentation
+├── eslint.config.js          # ESLint configuration
+├── index.html                # HTML entry point
+├── LICENSE                   # Project license
+├── package.json              # Project dependencies & scripts
+├── README.md                 # Project documentation
+├── test-layout.html          # Layout testing file
+├── vercel.json               # Vercel deployment config
+└── vite.config.js            # Vite build configuration
 ```
 
 ## 🎯 Why This Project Impresses Recruiters
